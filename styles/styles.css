@@ -1,0 +1,213 @@
+/* GLOBAL CSS STYLES */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url(../images/line-paper.jpg);
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* END OF GLOBAL CSS STYLES */
+
+/* INDEX.HTML STYLES */
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* END OF INDEX.HTML STYLES */
+
+/* GAME.HTML STYLES */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  cursor: pointer;
+  height: 100px;
+}
+
+.cell:hover {
+  background-color: #f2f2f2;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.cell.winning-cell {
+  background-color: yellow;
+  color: red;
+}
+
+.restart-button,
+.end-game-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-name {
+  font-weight: bold;
+  padding: 2px 20px;
+}
+
+.player-score {
+  padding: 5px 10px;
+  background-color: #0038a8;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .screen {
+    padding: 10px;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .board {
+    max-width: 200px;
+  }
+
+  .cell {
+    font-size: 36px;
+    height: 70px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+
+  .restart-button,
+  .end-game-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* END OF MEDIA QUERIES */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <div id="opening-screen" class="screen">
+    <h1>Welcome to Tic Tac Toe!</h1>
+    <div class="button-container">
+      <button class="button" onclick="showInputScreen()">Start</button>
+      <button class="button" onclick="showInstructions()">Help</button>
+    </div>
+  </div>
+
+  <div id="input-screen" class="screen" style="display: none;">
+    <h1>Enter Player Names</h1>
+    <div class="input-container">
+      <input type="text" class="input-field" id="player1Name" placeholder="Player 1 Name" required>
+      <input type="text" class="input-field" id="player2Name" placeholder="Player 2 Name" required>
+      <button class="button" onclick="startGame()" id="startButton">Start</button>
+    </div>
+  </div>
+
+
+  <div id="instructions-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="hideInstructions()">&times;</span>
+      <h2>Instructions</h2>
+      <p>Welcome to Tic-Tac-Toe!</p>
+      <p>Here's a quick summary of the instructions:</p>
+      <ul>
+        <li>The game is played on a 3x3 grid.</li>
+        <li>Two players take turns to place their respective symbols (usually X and O) on the grid.</li>
+        <li>The objective is to get three of your symbols in a row (horizontally, vertically, or diagonally) before your opponent.</li>
+        <li>The game ends in a draw if the entire grid is filled without a winner.</li>
+        <li>To start, enter the names of both players and click "Start".</li>
+      </ul>
+      <p>Best of luck and have fun!</p>
+    </div>
+  </div>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
